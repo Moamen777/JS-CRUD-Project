@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 15</title>
+    <link rel="stylesheet" href="./assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/CSS/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="my-5">
+            <h1>Product Form</h1>
+            <div class="py-3 px-2 bg-secondary-subtle rounded-3 shadow">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName"
+                        placeholder="Ex:Dell Precision 7520">
+                </div>
+                <div class="mb-3">
+                    <label for="productCategory" class="form-label">Product Category</label>
+                    <input type="text" class="form-control" id="productCategory" placeholder="Ex:Laptop">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" placeholder="Ex:13500">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="button" onclick="addproduct()">Add to Cart</button>
+                </div>
+            </div>
+            <div id="search" class="my-3">
+                <div class="mb-3">
+                    <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                </div>
+            </div>
+        </div>
+
+        <h2>Products Data</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tabledata">
+              
+              
+            </tbody>
+          </table>
+    </div>
+
+
+
+
+    <script src="./assets/JS/main.js"></script>
+    <script src="./assets/JS/all.min.js"></script>
+</body>
+
+</html>
