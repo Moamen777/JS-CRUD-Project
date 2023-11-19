@@ -7,18 +7,27 @@ var button = document.getElementById("addbutton");
 var productList = [];
 var updatedindex;
 
+if (JSON.parse(localStorage.getItem('product')).length > 0) {
+    productList = JSON.parse(localStorage.getItem('product'));
+    displayProduct(productList);
+}
+
+
+
 function addproduct() {
     var productItem = {
         productName: productName.value,
         productCategory: productCategory.value,
         price: Number(price.value),
     }
-    if (button.innerText.toLowerCase() == 'submit') {
+    if (button.innerText.toLowerCase() == 'add to cart') {
         productList.push(productItem);
     } else {
         updateProduct(updatedindex, productItem)
     }
-
+     
+    localStorage.setItem('product',JSON.stringify(productList));
+            
     displayProduct(productList);
     cleardata();
 }
@@ -50,6 +59,7 @@ function cleardata() {
 function deletedata(index) {
     productList.splice(index, 1);
     displayProduct(productList);
+    localStorage.setItem('product',JSON.stringify(productList));
 }
 
 
